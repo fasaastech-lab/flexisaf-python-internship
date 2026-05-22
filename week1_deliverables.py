@@ -1,5 +1,11 @@
-name = input("Enter your name: ")
-#Validating age
+# Validating name
+while True:
+    name = input("Enter your name: ")
+    if not name.strip():
+        print("Name cannot be empty")
+    else:
+        break
+# Validating age
 while True:
     try:
         age = int(input("Enter your age: "))
@@ -7,22 +13,21 @@ while True:
         print("Age is not an integer")
     else:
         break
-#Validating phone_number
-while True:    
-    try:
-        phone = int(input("Enter your phone: "))
-    except ValueError:
-        print("Phone is not an number")
-    else:
-        break
-#Validating email
+# Validating email
 while True:
     email = input("Enter your email: ")
-    if "@" or '.' not in email:
-        print('Invalid Email')
+    if "@" not in email or "." not in email:
+        print("Invalid Email")
     else:
         break
-#Displaying user's profile
+# Validating phone_number
+while True:
+    phone = input("Enter your phone: ")
+    if not phone.isdigit():
+        print("Phone must contain numbers only")
+    else:
+        break
+# Displaying user's profile
 print("USER PROFILE:")
 print(f"Name: {name}")
 print(f"Age: {age}")
