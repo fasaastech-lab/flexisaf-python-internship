@@ -1,3 +1,4 @@
+import json
 # Validating name
 while True:
     name = input("Enter your name: ")
@@ -33,3 +34,21 @@ print(f"Name: {name}")
 print(f"Age: {age}")
 print(f"Email: {email}")
 print(f"Phone no: {phone}")
+# Adding JSON profile
+profile = {
+    "name": name,
+    "age": age,
+    "email": email,
+    "phone": phone
+}
+with open("profile.json", "w") as f:
+    json.dump(profile, f, indent=4)
+print("Profile saved to profile.json")
+# Read and display saved profile
+with open("profile.json", "r") as f:
+    saved_profile = json.load(f)
+print("\nSaved Profile:")
+print(f"Name: {saved_profile['name']}")
+print(f"Age: {saved_profile['age']}")
+print(f"Email: {saved_profile['email']}")
+print(f"Phone: {saved_profile['phone']}")
