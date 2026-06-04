@@ -8,7 +8,7 @@ total_expenses = food + transport + utilities
 print(f"Total expenses: {total_expenses}")
 balance = monthly_budget - total_expenses
 print(f"Balance: {balance}")
-# Compare expense and budget
+# Evaluate expense to budget
 if balance >= 0:
     print("Your expenses are within budget")
 else: 
