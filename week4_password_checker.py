@@ -1,14 +1,6 @@
 # Get password input
 password = input("Enter password: ")
 
-# Check password length
-if len(password) >= 12:
-    print("Your password length is strong")
-elif len(password) >= 8:
-    print("Your password length is medium")
-else:
-    print("Your password length is weak")
-
 # Set flag for numbers and special characters in password
 has_number = False
 has_special = False
@@ -20,3 +12,11 @@ for char in password:
         has_number = True
     if char in special:
         has_special = True
+
+# Check password strength
+if len(password) >= 12 and has_number and has_special:
+    print("Password is strong")
+elif len(password) >= 8 and (has_special or has_number):
+    print("Password is medium")
+else:
+    print("Password length is weak")
