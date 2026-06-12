@@ -16,7 +16,12 @@ for char in password:
 # Check password strength
 if len(password) >= 12 and has_number and has_special:
     print("Password is strong")
+    print("Tip: Great password!") 
 elif len(password) >= 8 and (has_special or has_number):
     print("Password is medium")
+    print("Tip: Add special characters and " 
+        "increase length to 12+ for a stronger password.")
 else:
     print("Password length is weak")
+    print("Tip: Use at least 8 characters," 
+        "include numbers and special characters like !@#$.")
