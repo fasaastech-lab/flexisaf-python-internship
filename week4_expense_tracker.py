@@ -17,7 +17,8 @@ print("=" * 20)
 print("SUMMARY")
 print("=" * 20)
 for entry in expense:
-    print(f"Category: {entry[1]}  Amount: {entry[0]}  Note: {entry[2]}  Date: {entry[3]}")
+    print(f"Category: {entry[1]}  Amount: {entry[0]}  "
+        f"Note: {entry[2]}  Date: {entry[3]}")
 
 # Calculate and display total
 total = sum(entry[0] for entry in expense)
