@@ -130,3 +130,48 @@ Total expenses: 57000.0
 Balance: -7000.0
 You're spending above your budget
 ```
+## Week 4: Loops
+
+### 4a: Password Strength Checker
+
+#### Description
+A console program that asks the user for a password and evaluates its strength by scanning characters and applying rules. Reports Weak, Medium, or Strong with actionable tips.
+
+#### How to Run
+```bash
+python week4_password_checker.py
+```
+
+#### Sample Output
+```
+Enter password: wert234
+Password is weak
+Tip: Use at least 8 characters, include numbers and special characters like !@#$.
+```
+
+---
+
+### 4b: Expense Tracker with Loop
+
+#### Description
+A console loop that repeatedly prompts the user to add expenses including amount, category, note, and date. Stops when the user types exit and displays a full summary with total.
+
+#### How to Run
+```bash
+python week4_expense_tracker.py
+```
+
+#### Sample Output
+```
+Enter category: Book
+Enter amount: 500
+Write a note: School notebook
+Enter date: 12/06/2026
+Enter category: exit
+====================
+SUMMARY
+====================
+Category: Book  Amount: 500.0  Note: School notebook  Date: 12/06/2026
+====================
+Total expenses: 500.0
+```
