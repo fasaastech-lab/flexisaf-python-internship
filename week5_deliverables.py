@@ -18,3 +18,21 @@ while True:
         assignments[num-1][1] = "Completed"
     elif choice == "4":
         break
+
+expenses = []
+
+while True:
+    item = input("Enter expense item (or type exit to stop): ")
+    if item.lower() == "exit":
+        break
+    amount = float(input("Enter amount: "))
+    expenses.append((item, amount))
+
+print("\nAll expenses:")
+for e in expenses:
+    print(e)
+
+high_expenses = [e for e in expenses if e[1] > 1000]
+print("\nExpenses above 1000:")
+for e in high_expenses:
+    print(e)
