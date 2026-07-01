@@ -40,7 +40,15 @@ while True:
                 print(f"Phone: {info["phone"]}")
                 print(f"Role: {info["role"]}")
     elif choice == "3":
-        pass
+        contact_id = input("Enter contact ID: ")
+        if contact_id in contacts:
+            info = contacts[contact_id]
+            print(f"\nName: {info['name']}")
+            print(f"Email: {info['email']}")
+            print(f"Phone: {info['phone']}")
+            print(f"Role: {info['role']}")
+        else:
+            print("Contact not found.")
     elif choice == "4":
         pass
     elif choice == "5":
