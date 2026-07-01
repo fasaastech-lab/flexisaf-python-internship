@@ -30,7 +30,15 @@ while True:
                 used_phones.add(phone)
                 print("Contact added successfully")
     elif choice == "2":
-        print(contacts)
+        if not contacts:
+            print("Contacts is empty")
+        else:
+            for id, info in contacts.items():
+                print(f"\nID: {id}")
+                print(f"Name: {info["name"]}")
+                print(f"Email: {info["email"]}")
+                print(f"Phone: {info["phone"]}")
+                print(f"Role: {info["role"]}")
     elif choice == "3":
         pass
     elif choice == "4":
