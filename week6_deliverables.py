@@ -52,6 +52,15 @@ while True:
     elif choice == "4":
         pass
     elif choice == "5":
-        pass
+        id = input("Enter ID to delete: ")
+
+        if contact_id in contacts:
+            used_emails.remove(contacts[id]["email"])
+            used_phones.remove(contacts[id]["phone"])
+
+            del contacts[id]
+            print("Contact deleted successfully.")
+        else:
+            print("Contact not found.")
     elif choice == "6":
         break
