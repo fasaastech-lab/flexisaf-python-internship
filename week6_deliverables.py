@@ -12,7 +12,23 @@ while True:
     choice = input("Choose an option: ")
 
     if choice == "1":
-        pass
+        id = input("Enter a ID: ")
+        if id in contacts:
+            print("This ID has been taken")
+        else:
+            name = input("Enter your name: ")
+            email = input("Enter your email")
+            phone = input("Enter your phone number: ")
+            role = input("Enter your role: ")
+        contacts[id] = {"name": name, "email": email, "phone": phone, "role": role}
+        if email in used_emails:
+            print("This email is taken. Pick another one")
+        else:
+            used_emails.add(email)
+        if phone in used_phones:
+            print("This phone number is taken. Pick another one") 
+        else:
+            used_phones.add(phone)
     elif choice == "2":
         pass
     elif choice == "3":
