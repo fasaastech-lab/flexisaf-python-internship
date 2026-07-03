@@ -63,4 +63,4 @@ while True:
         else:
             print("Contact not found.")
     elif choice == "6":
-        break
+        print("Invalid option. Please choose between 1 and 6.")
