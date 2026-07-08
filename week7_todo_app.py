@@ -19,10 +19,10 @@ while True:
     elif option == "2":
         view_task(tasks)
     elif option == "3":
-        num = int(input("Enter task number: "))
+        num = int(input("Enter task number to mark: "))
         mark_done(tasks, num)
     elif option == "4":
-        num = int(input("Enter task number: "))
+        num = int(input("Enter task number to delete: "))
         delete_task(tasks, num)
     elif option == "5":
         print("Goodbye!")
