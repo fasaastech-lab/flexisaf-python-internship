@@ -17,10 +17,10 @@ def view_task(tasks):
 
 def mark_done(tasks, num):
     # Mark tasks as done
-    if 1 > num > len(tasks):
+    if not (1 <= num <= len(tasks)):
         print("Invalid task number")
-    else: 
-        tasks[num-1][1] = "Done"
+    else:
+        tasks[num - 1][1] = "Done"
         print("Task is done")
         
 
