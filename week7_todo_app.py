@@ -1,8 +1,10 @@
+# Import needed functions
 from week7_todo_functions import add_task, view_task, mark_done, delete_task
 
+# Create tasks list
 tasks = []
 
-# Main loop
+# Main menu loop
 while True:
     print("\n1. Add task")
     print("2. View tasks")
