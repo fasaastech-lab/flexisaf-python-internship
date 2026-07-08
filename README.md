@@ -175,3 +175,155 @@ Category: Book  Amount: 500.0  Note: School notebook  Date: 12/06/2026
 ====================
 Total expenses: 500.0
 ```
+
+## Week 5: Lists & Tuples
+
+### 5a: To-Do List Manager
+
+#### Description
+A console menu program that helps students manage school assignments. Students can add, view, mark as completed, and remove assignments stored in a list of lists.
+
+#### How to Run
+```bash
+python week5_deliverables.py
+```
+
+#### Sample Output
+```
+1. Add assignment
+2. View assignments
+3. Mark as completed
+4. Remove assignment
+5. Exit
+Choose an option: 1
+Enter assignment: Maths
+Choose an option: 1
+Enter assignment: English
+Choose an option: 2
+1. Maths - Pending
+2. English - Pending
+Choose an option: 3
+Enter assignment number to mark complete: 1
+Choose an option: 2
+1. Maths - Completed
+2. English - Pending
+Choose an option: 5
+```
+
+---
+
+### 5b: Expense Tracker with Tuples
+
+#### Description
+Collects daily school-related expenses stored as tuples of item and amount. Uses list comprehension to filter and display expenses above a specified amount.
+
+#### How to Run
+```bash
+python week5_deliverables.py
+```
+
+#### Sample Output
+```
+Enter expense item (or type exit to stop): Textbook
+Enter amount: 3500
+Enter expense item (or type exit to stop): Pen
+Enter amount: 100
+Enter expense item (or type exit to stop): exit
+
+All expenses:
+('Textbook', 3500.0)
+('Pen', 100.0)
+
+Expenses above 1000:
+('Textbook', 3500.0)
+```
+
+## Week 6: Dictionaries & Sets
+
+### 6a: Student Contact Manager
+
+#### Description
+A console program that stores and manages student, parent, and teacher contact details using nested dictionaries. Uses sets to prevent duplicate emails and phone numbers. Supports adding, viewing, searching, updating, and deleting contacts with input validation.
+
+#### How to Run
+```bash
+python week6_deliverables.py
+```
+
+#### Sample Output
+```
+1. Add contact
+2. View contacts
+3. Search contact
+4. Update contact
+5. Delete contact
+6. Exit
+Choose an option: 1
+Enter an ID: S001
+Enter your name: Abdulraheem Fasasi
+Enter your email: abdulraheem@vea.edu.ng
+Enter your phone number: 09012981955
+Enter your role: Student
+Contact added successfully
+
+Choose an option: 3
+Enter contact ID: S001
+Name: Abdulraheem Fasasi
+Email: abdulraheem@vea.edu.ng
+Phone: 09012981955
+Role: Student
+
+Choose an option: 6
+```
+
+---
+
+## Week 7: Functions, Built-in Functions & Modules
+
+### 7a: CLI To-Do List App
+
+#### Description
+A command-line To-Do List application split across two files. The functions module contains reusable functions for adding, viewing, marking, and deleting tasks. The app module imports these functions and runs the menu loop. Uses enumerate() to number tasks and handles invalid input politely.
+
+#### How to Run
+```bash
+python week7_todo_app.py
+```
+
+#### Sample Output
+```
+1. Add task
+2. View tasks
+3. Mark task as done
+4. Delete task
+5. Exit
+Choose an option: 1
+Enter task: Maths assignment
+Task was added
+
+Choose an option: 1
+Enter task: English essay
+Task was added
+
+Choose an option: 2
+1. Maths assignment - Pending
+2. English essay - Pending
+
+Choose an option: 3
+Enter task number: 1
+Task is done
+
+Choose an option: 2
+1. Maths assignment - Done
+2. English essay - Pending
+
+Choose an option: 4
+Enter task number: 2
+Tasks deleted
+
+Choose an option: 2
+1. Maths assignment - Done
+
+Choose an option: 5
+Goodbye!
+```
