@@ -5,7 +5,8 @@ Deliverables for the FlexiSAF Python Programming Internship (Beginner Stage)
 
 ## Requirements
 - Python 3.6 or higher
-- No external libraries required. Uses only Python built-in modules.
+- No external libraries required for most weeks
+- `requests` library required for Week 8 — install with `pip install requests`
 
 ## Clone the Repository
 
@@ -326,4 +327,66 @@ Choose an option: 2
 
 Choose an option: 5
 Goodbye!
+```
+
+## Week 8: Error Handling & Debugging
+
+### Required Libraries
+- requests — install with `pip install requests`
+
+### 8a: API Request with Error Handling
+
+#### Description
+A script that makes a GET request to a public API and handles common errors including connection failures, timeouts, and HTTP errors using try/except blocks.
+
+#### How to Run
+```bash
+python week8_api_request.py
+```
+
+#### Sample Output
+```
+Request successful
+{'args': {}, 'headers': {'Accept': '*/*', ...}, 'url': 'https://httpbin.org/get'}
+```
+
+---
+
+### 8b: File Copy Tool
+
+#### Description
+A backup tool that copies content from one file to another. Handles missing source files, permission errors, and prevents accidental overwrites by asking for confirmation.
+
+#### How to Run
+```bash
+python week8_file_copy.py
+```
+
+#### Sample Output
+```
+Enter source file name: test_source.txt
+Enter destination file name: test_dest.txt
+File copied from test_source.txt to test_dest.txt successfully.
+```
+
+---
+
+
+## Week 9: File Handling (Text Files / CSV)
+
+### 9a: Student Grade CSV Manager
+
+#### Description
+Writes student names and scores to a CSV file, reads it back, calculates the class average, and identifies the top performer. A practical grade management tool for VEA.
+
+#### How to Run
+```bash
+python week9_csv_grades.py
+```
+
+#### Sample Output
+```
+Grades saved to grades.csv
+Class average: 77.8
+Top performer: Aisha with 88
 ```
