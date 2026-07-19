@@ -9,6 +9,6 @@ def multiply(a, b):
 
 def divide(a, b):
     if b == 0:
-        print("Zero can't be a divisor")
+        return "Error: Zero can't be a divisor"
     else:
         return a/b
