@@ -390,3 +390,98 @@ Grades saved to grades.csv
 Class average: 77.8
 Top performer: Aisha with 88
 ```
+
+## Week 10: Modules & Imports
+
+### 10a: Basic Math Operations Calculator
+
+#### Description
+A calculator split across two files. The math tools module contains reusable functions for addition, subtraction, multiplication, and division. The app module imports these functions and runs a menu loop where the user chooses an operation and enters two numbers to get the result.
+
+#### How to Run
+```bash
+python week10_math_app.py
+```
+
+#### Sample Output
+```
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+5. Exit
+Choose an operation: 1
+Enter a: 10
+Enter b: 5
+15.0
+
+Choose an operation: 4
+Enter a: 2
+Enter b: 0
+Error: Zero can't be a divisor
+
+Choose an operation: 5
+Goodbye!
+```
+
+---
+
+## Week 11: Dates, Time & Package Management
+
+### Required Libraries
+- `pandas` — install with `pip install pandas`
+
+### 11a: Task Logger & Expense Tracker
+
+#### Description
+Collects expenses with category, amount, and note. Automatically timestamps each entry using datetime. Saves all expenses to a CSV file and uses pandas to generate a summary showing total spent and average expense.
+
+#### How to Run
+```bash
+python week11_expense_logger.py
+```
+
+#### Sample Output
+```
+Category (or exit to stop): food
+Amount: 1000
+Note: breakfast
+Category (or exit to stop): book
+Amount: 500
+Note: notebook
+Category (or exit to stop): exit
+Expenses saved to expenses.csv
+
+--- Expense Summary ---
+Total spent: 1500.0
+Average expense: 750.0
+```
+
+---
+
+### 11b: Task Logger & Environment Export
+
+#### Description
+Tracks user actions and saves them to a text file with timestamps. Each logged action shows exactly when it was performed. Also exports the full Python environment dependencies using pip freeze.
+
+#### How to Run
+```bash
+python week11_task_logger.py
+```
+
+To export environment dependencies:
+```bash
+pip freeze > requirements_full.txt
+```
+
+#### Sample Output
+```
+--- Task Logger Started ---
+Type 'exit' to stop logging.
+Enter an action you performed: Reviewed exam questions
+Action logged successfully!
+Enter an action you performed: Updated student records
+Action logged successfully!
+Enter an action you performed: exit
+Exiting logger. Check 'task_log.txt' for your history.
+```
