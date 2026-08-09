@@ -39,3 +39,17 @@ def add_student(students):
         }
         save_data(students)
         print(f"Student {name} added successfully.")
+
+def record_payment(students):
+    # Record payments
+    id = input("Enter student's ID")
+    if id not in students:
+        print("Student not found")
+    else:
+        amount = float(input("Enter amount paid"))
+        date = input("Enter the date of payment")
+        students[id]["payments"].append({"amount": amount, "date": date})
+        print("Payments added successfully")
+        save_data(students)
+
+    
