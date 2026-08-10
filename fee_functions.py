@@ -51,5 +51,21 @@ def record_payment(students):
         students[id]["payments"].append({"amount": amount, "date": date})
         print("Payments added successfully")
         save_data(students)
+        
 
-    
+def get_balance(students):
+    # Get student balance
+    id = input("Enter student's ID")
+    if id not in students:
+        print("Student not found")
+    else:
+        total_paid = 0
+        for p in students[id]["payments"]:
+            total_paid += p["amount"]
+        balance = students[id]["total_due"] - students[id]["discount"] - total_paid
+        print(f"Student: {students[id]['name']}")
+        print(f"Total Due: {students[id]['total_due']}")
+        print(f"Discount: {students[id]['discount']}")
+        print(f"Total Paid: {total_paid}")
+        print(f"Balance: {balance}")
+        return balance
