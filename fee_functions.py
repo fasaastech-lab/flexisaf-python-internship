@@ -41,7 +41,7 @@ def add_student(students):
         print(f"Student {name} added successfully.")
 
 def record_payment(students):
-    # Record payments
+    # Record student payments
     id = input("Enter student's ID")
     if id not in students:
         print("Student not found")
@@ -62,10 +62,37 @@ def get_balance(students):
         total_paid = 0
         for p in students[id]["payments"]:
             total_paid += p["amount"]
-        balance = students[id]["total_due"] - students[id]["discount"] - total_paid
+        balance = students[id]["total_due"] - students[id][
+            "discount"] - total_paid
         print(f"Student: {students[id]['name']}")
         print(f"Total Due: {students[id]['total_due']}")
         print(f"Discount: {students[id]['discount']}")
         print(f"Total Paid: {total_paid}")
         print(f"Balance: {balance}")
         return balance
+
+def search_student(students):
+    # Search for existing student
+    search_key = input("Search by name or class: ").lower()
+    results = []
+    for id, info in students.items():
+        if search_key in info["name"].lower() or search_key in info["class"].lower():
+            results.append((id, info))
+    
+    if not results:
+        print("No student found")
+    else:
+        for id, info in results:
+            print(f"Student ID: {id}")
+            print(f"Name: {info['name']}")
+            print(f"Class: {info['class']}")
+            print(f"Total fees: {info['total_due']}")
+            print(f"Discount: {info['discount']}")
+            # Calculate total paid and balance
+            total_paid = 0
+            for p in info["payments"]:
+                total_paid += p["amount"]
+            balance = info["total_due"] - info["discount"] - total_paid
+
+            print(f"Total paid: {total_paid}")
+            print(f"Balance: {balance}")
