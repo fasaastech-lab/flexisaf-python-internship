@@ -1,0 +1,28 @@
+{
+    "200": {
+        "name": "Zainab",
+        "class": "JSS 2",
+        "total_due": 43000.0,
+        "discount": 43000.0,
+        "payments": [
+            {
+                "amount": 0.0,
+                "date": "12/07/2026"
+            }
+        ],
+        "remarks": "Scholarship"
+    },
+    "201": {
+        "name": "Azeezah",
+        "class": "JSS 2",
+        "total_due": 43000.0,
+        "discount": 0.0,
+        "payments": [
+            {
+                "amount": 43000.0,
+                "date": "12/07/2026"
+            }
+        ],
+        "remarks": "no discount"
+    }
+}

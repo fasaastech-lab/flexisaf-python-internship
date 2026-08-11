@@ -103,6 +103,7 @@ def class_report(students):
     class_name = input("Enter class name: ")
     total_class_due = 0
     total_class_paid = 0
+    total_class_discount = 0
     found = False
 
     for id, info in students.items():
@@ -119,13 +120,15 @@ def class_report(students):
             print("-" * 30)
             total_class_due += info["total_due"]
             total_class_paid += total_paid
+            total_class_discount += info["discount"]
 
     if not found:
         print("No students found in this class")
     else:
         print(f"\nClass Total Due: {total_class_due}")
         print(f"Class Total Paid: {total_class_paid}")
-        print(f"Class Outstanding: {total_class_due - total_class_paid}")
+        outstanding = total_class_due - total_class_discount - total_class_paid
+        print(f"Class Outstanding: {outstanding}")
 
 
 def export_to_csv(students):
