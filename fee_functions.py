@@ -64,7 +64,7 @@ def get_balance(students):
             total_paid += p["amount"]
         balance = students[id]["total_due"] - students[id][
             "discount"] - total_paid
-        print(f"Student: {students[id]['name']}")
+        print(f"\nStudent: {students[id]['name']}")
         print(f"Total Due: {students[id]['total_due']}")
         print(f"Discount: {students[id]['discount']}")
         print(f"Total Paid: {total_paid}")
@@ -76,14 +76,15 @@ def search_student(students):
     search_key = input("Search by name or class: ").lower()
     results = []
     for id, info in students.items():
-        if search_key in info["name"].lower() or search_key in info["class"].lower():
+        if search_key in info["name"].lower() or search_key in info[
+            "class"].lower():
             results.append((id, info))
     
     if not results:
         print("No student found")
     else:
         for id, info in results:
-            print(f"Student ID: {id}")
+            print(f"\nStudent ID: {id}")
             print(f"Name: {info['name']}")
             print(f"Class: {info['class']}")
             print(f"Total fees: {info['total_due']}")
@@ -96,3 +97,32 @@ def search_student(students):
 
             print(f"Total paid: {total_paid}")
             print(f"Balance: {balance}")
+
+
+def class_report(students):
+    class_name = input("Enter class name: ")
+    total_class_due = 0
+    total_class_paid = 0
+    found = False
+
+    for id, info in students.items():
+        if info["class"].lower() == class_name.lower():
+            found = True
+            total_paid = 0
+            for p in info["payments"]:
+                total_paid += p["amount"]
+            balance = info["total_due"] - info["discount"] - total_paid
+            print(f"Name: {info['name']}")
+            print(f"Total Due: {info['total_due']}")
+            print(f"Total Paid: {total_paid}")
+            print(f"Balance: {balance}")
+            print("-" * 30)
+            total_class_due += info["total_due"]
+            total_class_paid += total_paid
+
+    if not found:
+        print("No students found in this class")
+    else:
+        print(f"\nClass Total Due: {total_class_due}")
+        print(f"Class Total Paid: {total_class_paid}")
+        print(f"Class Outstanding: {total_class_due - total_class_paid}")
