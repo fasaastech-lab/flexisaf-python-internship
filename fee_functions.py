@@ -126,3 +126,22 @@ def class_report(students):
         print(f"\nClass Total Due: {total_class_due}")
         print(f"Class Total Paid: {total_class_paid}")
         print(f"Class Outstanding: {total_class_due - total_class_paid}")
+
+
+def export_to_csv(students):
+    with open("fee_report.csv", "w", newline="") as file:
+        writer = csv.writer(file)
+        writer.writerow([
+            "ID", "Name", "Class", "Total Due", 
+            "Discount", "Total Paid", "Balance"
+        ])
+        for id, info in students.items():
+            total_paid = 0
+            for p in info["payments"]:
+                total_paid += p["amount"]
+            balance = info["total_due"] - info["discount"] - total_paid
+            writer.writerow([
+                id, info["name"], info["class"], info["total_due"],
+                info["discount"], total_paid, balance
+            ])
+    print("Fee report exported to fee_report.csv")
