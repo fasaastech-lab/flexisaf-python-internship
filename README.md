@@ -17,6 +17,44 @@ cd flexisaf-python-internship
 
 ---
 
+## Capstone Project: VEA School Fee Calculator
+
+### Problem
+Victory Educational Academy (VEA) manages fee payments for 113 students across 12 classes using Excel. Tracking balances, recording payments, and generating reports manually is time-consuming and error-prone.
+
+### Solution
+A Python CLI tool that automates student fee management — adding students, recording payments, calculating balances, generating class reports, and exporting to CSV. Data persists between sessions using JSON.
+
+### Features
+- Add students with fee details and discounts
+- Record multiple payments per student
+- Calculate outstanding balance per student
+- Search students by name or class
+- Generate class-level financial reports
+- Export full fee report to CSV
+- Data saved automatically to JSON
+
+### How to Run
+```bash
+python fee_app.py
+```
+
+### Sample Data
+Sample data is stored in `fees.json`. Run the program and use option 1 to add students.
+
+### Core Logic
+- Student data stored as nested dictionary keyed by student ID
+- Payments stored as a list of dictionaries per student
+- Balance = Total Due − Discount − Sum of all payments
+- Class outstanding = Class Total Due − Class Total Discount − Class Total Paid
+
+### Results
+See the `screenshots/` folder for terminal output of all features.
+See `fee_report.csv` for a sample exported report.
+
+### Required Libraries
+No external libraries required. Uses only Python built-in modules (json, csv, datetime).
+
 ## Week 1: Interactive User Profile Collector
 
 ### Description
