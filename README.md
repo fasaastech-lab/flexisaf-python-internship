@@ -1,17 +1,18 @@
 # FlexiSAF Python Internship — Beginner Stage
 
 ## Project Context
-Deliverables for the FlexiSAF Python Programming Internship (Beginner Stage)
+Deliverables for the FlexiSAF Python Programming Internship (Beginner Stage) — Abdulraheem Kehinde Fasasi
 
 ## Requirements
 - Python 3.6 or higher
 - No external libraries required for most weeks
 - `requests` library required for Week 8 — install with `pip install requests`
+- `pandas` library required for Week 11 — install with `pip install pandas`
 
 ## Clone the Repository
 
 ```bash
-git clone git@github.com:fasaastech-lab/flexisaf-python-internship.git
+git clone https://github.com/fasaastech-lab/flexisaf-python-internship.git
 cd flexisaf-python-internship
 ```
 
@@ -40,20 +41,24 @@ python fee_app.py
 ```
 
 ### Sample Data
-Sample data is stored in `fees.json`. Run the program and use option 1 to add students.
+Sample data is stored in `fees.json`. Run the program and use option 1 to add students. A sample exported report is available in `fee_report.csv`.
 
 ### Core Logic
 - Student data stored as nested dictionary keyed by student ID
 - Payments stored as a list of dictionaries per student
 - Balance = Total Due − Discount − Sum of all payments
-- Class outstanding = Class Total Due − Class Total Discount − Class Total Paid
+- Class Outstanding = Class Total Due − Class Total Discount − Class Total Paid
 
 ### Results
-See the `screenshots/` folder for terminal output of all features.
-See `fee_report.csv` for a sample exported report.
+See the [screenshots folder](https://github.com/fasaastech-lab/flexisaf-python-internship/tree/main/screenshots) for terminal output of all features.
+
+### Presentation Slides
+[View Presentation PDF](https://github.com/fasaastech-lab/flexisaf-python-internship/blob/main/VEA-School-Fee-Calculator.pdf)
 
 ### Required Libraries
-No external libraries required. Uses only Python built-in modules (json, csv, datetime).
+No external libraries required. Uses only Python built-in modules — json, csv, datetime.
+
+---
 
 ## Week 1: Interactive User Profile Collector
 
@@ -61,22 +66,27 @@ No external libraries required. Uses only Python built-in modules (json, csv, da
 Collects a user's profile interactively, validates each input, saves it to a JSON file, and reads it back to the user.
 
 ### How to Run
-
 ```bash
 python week1_deliverables.py
 ```
 
 ### Sample Output
+```
 Enter your name: Abdulraheem
 Enter your age: 31
 Enter your email: fasaastech@gmail.com
 Enter your phone: 09012981955
 Profile saved to profile.json
+
 Saved Profile:
 Name: Abdulraheem
 Age: 31
 Email: fasaastech@gmail.com
 Phone: 09012981955
+```
+
+### Required Libraries
+No external libraries required.
 
 ---
 
@@ -86,12 +96,12 @@ Phone: 09012981955
 Accepts a student's assignment, test, and exam scores, calculates the total and average, evaluates pass or fail status, and checks award eligibility.
 
 ### How to Run
-
 ```bash
 python week2_deliverables.py
 ```
 
 ### Sample Output
+```
 Enter your assignment score: 18
 Enter your test score: 17
 Enter your exam score: 55
@@ -102,7 +112,12 @@ Total: 90
 Average: 30.0
 You passed
 You qualify for an award
+```
 
+### Required Libraries
+No external libraries required.
+
+---
 
 ## Week 3: Control Flow
 
@@ -142,7 +157,7 @@ python week3_loan_eligibility.py
 ```
 Enter your age: 19
 Enter your monthly income: 24356
-How much loan do you want: 
+How much loan do you want:
 Enter loan amount: 30000
 Loan request granted
 ```
@@ -169,6 +184,12 @@ Total expenses: 57000.0
 Balance: -7000.0
 You're spending above your budget
 ```
+
+### Required Libraries
+No external libraries required.
+
+---
+
 ## Week 4: Loops
 
 ### 4a: Password Strength Checker
@@ -215,6 +236,11 @@ Category: Book  Amount: 500.0  Note: School notebook  Date: 12/06/2026
 Total expenses: 500.0
 ```
 
+### Required Libraries
+No external libraries required.
+
+---
+
 ## Week 5: Lists & Tuples
 
 ### 5a: To-Do List Manager
@@ -236,16 +262,12 @@ python week5_deliverables.py
 5. Exit
 Choose an option: 1
 Enter assignment: Maths
-Choose an option: 1
-Enter assignment: English
 Choose an option: 2
 1. Maths - Pending
-2. English - Pending
 Choose an option: 3
 Enter assignment number to mark complete: 1
 Choose an option: 2
 1. Maths - Completed
-2. English - Pending
 Choose an option: 5
 ```
 
@@ -276,6 +298,11 @@ All expenses:
 Expenses above 1000:
 ('Textbook', 3500.0)
 ```
+
+### Required Libraries
+No external libraries required.
+
+---
 
 ## Week 6: Dictionaries & Sets
 
@@ -315,6 +342,9 @@ Role: Student
 Choose an option: 6
 ```
 
+### Required Libraries
+No external libraries required.
+
 ---
 
 ## Week 7: Functions, Built-in Functions & Modules
@@ -340,25 +370,12 @@ Choose an option: 1
 Enter task: Maths assignment
 Task was added
 
-Choose an option: 1
-Enter task: English essay
-Task was added
-
 Choose an option: 2
 1. Maths assignment - Pending
-2. English essay - Pending
 
 Choose an option: 3
 Enter task number: 1
 Task is done
-
-Choose an option: 2
-1. Maths assignment - Done
-2. English essay - Pending
-
-Choose an option: 4
-Enter task number: 2
-Tasks deleted
 
 Choose an option: 2
 1. Maths assignment - Done
@@ -367,10 +384,12 @@ Choose an option: 5
 Goodbye!
 ```
 
-## Week 8: Error Handling & Debugging
-
 ### Required Libraries
-- requests — install with `pip install requests`
+No external libraries required.
+
+---
+
+## Week 8: Error Handling & Debugging
 
 ### 8a: API Request with Error Handling
 
@@ -407,8 +426,12 @@ Enter destination file name: test_dest.txt
 File copied from test_source.txt to test_dest.txt successfully.
 ```
 
----
+### Required Libraries
+```bash
+pip install requests
+```
 
+---
 
 ## Week 9: File Handling (Text Files / CSV)
 
@@ -428,6 +451,11 @@ Grades saved to grades.csv
 Class average: 77.8
 Top performer: Aisha with 88
 ```
+
+### Required Libraries
+No external libraries required.
+
+---
 
 ## Week 10: Modules & Imports
 
@@ -462,12 +490,12 @@ Choose an operation: 5
 Goodbye!
 ```
 
+### Required Libraries
+No external libraries required.
+
 ---
 
 ## Week 11: Dates, Time & Package Management
-
-### Required Libraries
-- `pandas` — install with `pip install pandas`
 
 ### 11a: Task Logger & Expense Tracker
 
@@ -484,15 +512,12 @@ python week11_expense_logger.py
 Category (or exit to stop): food
 Amount: 1000
 Note: breakfast
-Category (or exit to stop): book
-Amount: 500
-Note: notebook
 Category (or exit to stop): exit
 Expenses saved to expenses.csv
 
 --- Expense Summary ---
-Total spent: 1500.0
-Average expense: 750.0
+Total spent: 1000.0
+Average expense: 1000.0
 ```
 
 ---
@@ -518,8 +543,11 @@ pip freeze > requirements_full.txt
 Type 'exit' to stop logging.
 Enter an action you performed: Reviewed exam questions
 Action logged successfully!
-Enter an action you performed: Updated student records
-Action logged successfully!
 Enter an action you performed: exit
 Exiting logger. Check 'task_log.txt' for your history.
+```
+
+### Required Libraries
+```bash
+pip install pandas
 ```
